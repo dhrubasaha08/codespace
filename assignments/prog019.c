@@ -3,7 +3,7 @@ Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
 Program No:     19
 Program Name:   Write a C program to implement insertion sort. Use dynamic memory allocation and subfunction.
-Date:           9/06/2022
+Date:           09/06/2022
 *************************************************************************************************************/
 
 #include <stdio.h>
