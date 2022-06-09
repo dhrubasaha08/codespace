@@ -22,12 +22,12 @@ void main()
     scanf("%d", &n);
     inputArr(arr, n);
 
-    printf("Before insertion sort\n");
+    printf("Before bubble sort\n");
     printArr(arr, n);
 
-    bubbbleSort(arr, n);
+    bubbleSort(arr, n);
 
-    printf("After insertion sort\n");
+    printf("After bubble sort\n");
     printArr(arr, n);
 
     free(arr);
@@ -75,5 +75,22 @@ void printArr(int *arr, int n)
 }
 
 /*
-
+Enter the number of elements:
+5
+Enter the element 1:
+63
+Enter the element 2:
+42
+Enter the element 3:
+57
+Enter the element 4:
+13
+Enter the element 5:
+5
+Before bubble sort
+Array:
+63 42 57 13 5 
+After bubble sort
+Array:
+5 13 42 57 63 
 */
