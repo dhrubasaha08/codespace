@@ -1,3 +1,13 @@
+/*************************************************************************************************************
+Name:           Dhruba Saha
+Roll No:        B.Sc(Sem-IV)-04
+Program No:     12
+Program Name:   Write a C program to sort all the data in a binary search tree either in ascending order or in
+                descending order.
+Date:           10/05/2022
+**************************************************************************************************************/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
