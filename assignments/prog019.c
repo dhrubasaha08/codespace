@@ -3,7 +3,7 @@ Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
 Program No:     19
 Program Name:   Write a C program to implement insertion sort. Use dynamic memory allocation and subfunction.
-Date:           22/05/2022
+Date:           9/06/2022
 *************************************************************************************************************/
 
 #include <stdio.h>
@@ -26,7 +26,7 @@ void main()
     printArr(arr, n);
 
     insertionSort(arr, n);
-    
+
     printf("After insertion sort\n");
     printArr(arr, n);
 
@@ -70,3 +70,24 @@ void printArr(int *arr, int n)
     }
     printf("\n");
 }
+
+/*
+Enter the number of elements:
+5
+Enter the element 1:
+78
+Enter the element 2:
+56
+Enter the element 3:
+45
+Enter the element 4:
+565
+Enter the element 5:
+74
+Before insertion sort
+Array:
+78 56 45 565 74 
+After insertion sort
+Array:
+45 56 74 78 565 
+*/
