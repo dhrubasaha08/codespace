@@ -1,8 +1,8 @@
 /************************************************************************************************************
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
-Program No:     19
-Program Name:   Write a C program to implement insertion sort. Use dynamic memory allocation and subfunction.
+Program No:     20
+Program Name:   Write a C program to implement selection sort. Use dynamic memory allocation and subfunction.
 Date:           9/06/2022
 *************************************************************************************************************/
 
@@ -10,7 +10,7 @@ Date:           9/06/2022
 #include <stdlib.h>
 
 void inputArr(int *arr, int n);
-void insertionSort(int *arr, int n);
+void selectionSort(int *arr, int n);
 void printArr(int *arr, int n);
 
 void main()
@@ -22,12 +22,12 @@ void main()
     scanf("%d", &n);
     inputArr(arr, n);
 
-    printf("Before insertion sort\n");
+    printf("Before selection sort\n");
     printArr(arr, n);
 
-    insertionSort(arr, n);
+    selectionSort(arr, n);
 
-    printf("After insertion sort\n");
+    printf("After selection sort\n");
     printArr(arr, n);
 
     free(arr);
@@ -44,18 +44,23 @@ void inputArr(int *arr, int n)
     }
 }
 
-void insertionSort(int *arr, int n)
+void selectionSort(int *arr, int n)
 {
-    int i, j, temp;
+    int i, j, min, temp;
 
-    for (i = 1; i < n; i++)
+    for (i = 0; i < n - 1; i++)
     {
-        temp = arr[i];
-        for (j = i - 1; j >= 0 && arr[j] > temp; j--)
+        min = i;
+        for (j = i + 1; j < n; j++)
         {
-            arr[j + 1] = arr[j];
+            if (arr[j] < arr[min])
+            {
+                min = j;
+            }
         }
-        arr[j + 1] = temp;
+        temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
     }
 }
 
@@ -75,19 +80,19 @@ void printArr(int *arr, int n)
 Enter the number of elements:
 5
 Enter the element 1:
-78
+96
 Enter the element 2:
-56
+564
 Enter the element 3:
-45
+53
 Enter the element 4:
-565
+642
 Enter the element 5:
-74
-Before insertion sort
+100
+Before selection sort
 Array:
-78 56 45 565 74
-After insertion sort
+96 564 53 642 100
+After selection sort
 Array:
-45 56 74 78 565
+53 96 100 564 642
 */

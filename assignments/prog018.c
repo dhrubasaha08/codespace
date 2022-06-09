@@ -1,16 +1,16 @@
-/************************************************************************************************************
+/*********************************************************************************************************
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
-Program No:     19
-Program Name:   Write a C program to implement insertion sort. Use dynamic memory allocation and subfunction.
+Program No:     18
+Program Name:   Write a C program to implement bubble sort. Use dynamic memory allocation and subfunction.
 Date:           9/06/2022
-*************************************************************************************************************/
+*********************************************************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 
 void inputArr(int *arr, int n);
-void insertionSort(int *arr, int n);
+void bubbleSort(int *arr, int n);
 void printArr(int *arr, int n);
 
 void main()
@@ -25,7 +25,7 @@ void main()
     printf("Before insertion sort\n");
     printArr(arr, n);
 
-    insertionSort(arr, n);
+    bubbbleSort(arr, n);
 
     printf("After insertion sort\n");
     printArr(arr, n);
@@ -44,18 +44,21 @@ void inputArr(int *arr, int n)
     }
 }
 
-void insertionSort(int *arr, int n)
+void bubbleSort(int *arr, int n)
 {
     int i, j, temp;
 
-    for (i = 1; i < n; i++)
+    for (i = 0; i < n - 1; i++)
     {
-        temp = arr[i];
-        for (j = i - 1; j >= 0 && arr[j] > temp; j--)
+        for (j = 0; j < n - i - 1; j++)
         {
-            arr[j + 1] = arr[j];
+            if (arr[j] > arr[j + 1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
         }
-        arr[j + 1] = temp;
     }
 }
 
@@ -72,22 +75,5 @@ void printArr(int *arr, int n)
 }
 
 /*
-Enter the number of elements:
-5
-Enter the element 1:
-78
-Enter the element 2:
-56
-Enter the element 3:
-45
-Enter the element 4:
-565
-Enter the element 5:
-74
-Before insertion sort
-Array:
-78 56 45 565 74
-After insertion sort
-Array:
-45 56 74 78 565
+
 */
