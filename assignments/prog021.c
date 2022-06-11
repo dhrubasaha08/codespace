@@ -14,14 +14,14 @@ void printArr(int *arr, int n);
 void merge(int *arr, int l, int m, int r);
 void mergeSort(int *arr, int l, int r);
 
-int main()
+void main()
 {
-    int n;
+    int n, *arr;
 
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    int *arr = (int *)malloc(n * sizeof(int));
+    arr = (int *)malloc(n * sizeof(int));
 
     inputArr(arr, n);
 
@@ -34,7 +34,6 @@ int main()
     printArr(arr, n);
 
     free(arr);
-    return 0;
 }
 
 void inputArr(int *arr, int n)
@@ -123,5 +122,25 @@ void printArr(int *arr, int n)
 }
 
 /*
-
+Enter the number of elements: 7
+Enter the element 1:
+43
+Enter the element 2:
+78
+Enter the element 3:
+12
+Enter the element 4:
+67
+Enter the element 5:
+89
+Enter the element 6:
+54
+Enter the element 7:
+33
+Before merge sort:
+Array:
+43 78 12 67 89 54 33
+After merge sort:
+Array:
+12 33 43 54 67 78 89
 */
