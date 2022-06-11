@@ -16,10 +16,12 @@ void printArr(int *arr, int n);
 void main()
 {
     int n, *arr;
-    arr = (int *)malloc(sizeof(int) * n);
 
     printf("Enter the number of elements:\n");
     scanf("%d", &n);
+    
+    arr = (int *)malloc(sizeof(int) * n);
+
     inputArr(arr, n);
 
     printf("Before insertion sort\n");

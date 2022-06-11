@@ -16,10 +16,12 @@ void printArr(int *arr, int n);
 void main()
 {
     int n, *arr;
-    arr = (int *)malloc(sizeof(int) * n);
 
     printf("Enter the number of elements:\n");
     scanf("%d", &n);
+
+    arr = (int *)malloc(sizeof(int) * n);
+    
     inputArr(arr, n);
 
     printf("Before bubble sort\n");
@@ -89,8 +91,8 @@ Enter the element 5:
 5
 Before bubble sort
 Array:
-63 42 57 13 5 
+63 42 57 13 5
 After bubble sort
 Array:
-5 13 42 57 63 
+5 13 42 57 63
 */
