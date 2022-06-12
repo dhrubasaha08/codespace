@@ -92,17 +92,17 @@ void printArr(int *arr, int n)
 /*
 Enter the number of elements: 5
 Enter the element 1:
-23
+34
 Enter the element 2:
-45
+21
 Enter the element 3:
-77
+10
 Enter the element 4:
-54
+6
 Enter the element 5:
-332
+43
 Before max heapify:
-23 45 77 54 332
+34 21 10 6 43 
 After max heapify:
-332 54 77 23 45
+43 34 10 6 21 
 */

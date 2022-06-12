@@ -88,5 +88,19 @@ void printArr(int *arr, int n)
 }
 
 /*
-
+Enter the number of elements: 5
+Enter the element 1:
+21
+Enter the element 2:
+23
+Enter the element 3:
+56
+Enter the element 4:
+71
+Enter the element 5:
+2
+Before min heapify:
+21 23 56 71 2 
+After min heapify:
+2 21 56 71 23
 */
