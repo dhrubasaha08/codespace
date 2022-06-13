@@ -36,6 +36,8 @@ void main()
 
     printf("After k-ary minheapify(k=3):\n");
     printArr(arr, n);
+
+    free(arr);
 }
 
 int parent(int i)

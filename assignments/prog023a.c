@@ -37,6 +37,8 @@ void main()
 
     printf("After k-ary maxheapify(k=3):\n");
     printArr(arr, n);
+
+    free(arr);
 }
 
 int parent(int i)
