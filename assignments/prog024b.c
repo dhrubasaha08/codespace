@@ -1,8 +1,8 @@
 /*********************************************************************************************
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
-Program No:     24A
-Program Name:   Write a C program to sort (ascending) a list of elements through a binary heap.
+Program No:     24B
+Program Name:   Write a C program to sort (decending) a list of elements through a binary heap.
 Date:           14/06/2022
 **********************************************************************************************/
 
@@ -10,8 +10,8 @@ Date:           14/06/2022
 #include <stdlib.h>
 
 void inputArr(int *arr, int n);
-void maxHeapify(int *arr, int n, int i);
-void buildMaxHeap(int *arr, int n);
+void minHeapify(int *arr, int n, int i);
+void buildMinHeap(int *arr, int n);
 void heapSort(int *arr, int n);
 void printArr(int *arr, int n);
 
@@ -32,7 +32,7 @@ void main()
 
     heapSort(arr, n);
 
-    printf("After sorting in ascending order\n");
+    printf("After sorting in decending order\n");
 
     printArr(arr, n);
 
@@ -51,50 +51,45 @@ void inputArr(int *arr, int n)
     }
 }
 
-void maxHeapify(int *arr, int n, int i)
+void minHeapify(int *arr, int n, int i)
 {
-    int largest, left, right;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+    int smallest = i;
 
-    left = 2 * i + 1;
-    right = 2 * i + 2;
-
-    if (left < n && arr[left] > arr[i])
+    if (left < n && arr[left] < arr[i])
     {
-        largest = left;
-    }
-    else
-    {
-        largest = i;
+        smallest = left;
     }
 
-    if (right < n && arr[right] > arr[largest])
+    if (right < n && arr[right] < arr[smallest])
     {
-        largest = right;
+        smallest = right;
     }
 
-    if (largest != i)
+    if (smallest != i)
     {
         int temp = arr[i];
-        arr[i] = arr[largest];
-        arr[largest] = temp;
+        arr[i] = arr[smallest];
+        arr[smallest] = temp;
 
-        maxHeapify(arr, n, largest);
+        minHeapify(arr, n, smallest);
     }
 }
 
-void buildMaxHeap(int *arr, int n)
+void buildMinHeap(int *arr, int n)
 {
     int i;
 
     for (i = n / 2 - 1; i >= 0; i--)
     {
-        maxHeapify(arr, n, i);
+        minHeapify(arr, n, i);
     }
 }
 
 void heapSort(int *arr, int n)
 {
-    buildMaxHeap(arr, n);
+    buildMinHeap(arr, n);
 
     int i;
 
@@ -104,7 +99,7 @@ void heapSort(int *arr, int n)
         arr[0] = arr[i];
         arr[i] = temp;
 
-        maxHeapify(arr, i, 0);
+        minHeapify(arr, i, 0);
     }
 }
 
@@ -125,18 +120,18 @@ Output:
 
 Enter number of elements:10
 Enter elements:
-46
-32
-13
+23
 45
-67
-89
-73
-49
-6
+22
+56
+78
+91
+27
 5
+1
+10
 Before sorting
-46 32 13 45 67 89 73 49 6 5
-After sorting in ascending order
-5 6 13 32 45 46 49 67 73 89
+23 45 22 56 78 91 27 5 1 10
+After sorting in decending order
+91 78 56 45 27 23 22 10 5 1
 */
