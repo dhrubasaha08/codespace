@@ -1,7 +1,7 @@
 /******************************************************
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
-Program No:     12
+Program No:     11B
 Program Name:   Write a C program to implement max heap
 *******************************************************/
 

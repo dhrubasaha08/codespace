@@ -1,7 +1,7 @@
 /******************************************************
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
-Program No:     11
+Program No:     11A
 Program Name:   Write a C program to implement min heap
 *******************************************************/
 
