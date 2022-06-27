@@ -2,7 +2,7 @@
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
 Program No:     12A
-Program Name:   Write a C program to sort (ascending) a list of elements through a max binary heap.
+Program Name:   Write a C program to sort (ascending) a list of elements through a binary max heap.
 **************************************************************************************************/
 
 #include <stdio.h>
