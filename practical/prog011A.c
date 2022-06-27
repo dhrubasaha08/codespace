@@ -1,8 +1,8 @@
 /************************************************************
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
-Program No:    11A
-Program Name:   Write a C program to create a binary minheap.
+Program No:     11A
+Program Name:   Write a C program to create a binary min heap.
 *************************************************************/
 
 #include <stdio.h>
