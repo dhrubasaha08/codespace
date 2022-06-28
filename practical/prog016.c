@@ -29,7 +29,7 @@ void applyUnion(int belongs[], int c1, int c2);
 void sort();
 void print();
 
-int main()
+void main()
 {
     int i, j, total_cost;
 
@@ -164,5 +164,5 @@ void print()
         cost = cost + spanlist.data[i].w;
     }
 
-    printf("\nSpanning tree cost: %d", cost);
+    printf("\nSpanning tree cost: %d\n", cost);
 }

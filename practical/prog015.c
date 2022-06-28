@@ -19,7 +19,7 @@ int G[V][V] = {
     {0, 19, 51, 0, 31},
     {0, 42, 66, 31, 0}};
 
-int main()
+void main()
 {
     int no_edge, selected[V], x, y;
 
@@ -56,6 +56,4 @@ int main()
         selected[y] = true;
         no_edge++;
     }
-
-    return 0;
 }
