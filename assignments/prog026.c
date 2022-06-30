@@ -56,3 +56,11 @@ int matrixChainOrder(int *p, int n)
 
     return m[1][n - 1];
 }
+
+/*
+Output:
+
+Enter the number of matrices:3
+Enter the dimensions of matrices:10 20 5
+The minimum number of multiplications is 1000
+*/
