@@ -45,4 +45,6 @@ void main()
         cost[a][b] = cost[b][a] = 999;
     }
     printf("\n Minimun cost=%d", mincost);
+
+    
 }
