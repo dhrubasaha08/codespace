@@ -53,7 +53,7 @@ int main()
         case 4:
             exit(0);
         default:
-            printf("Not available\n");
+            printf("Try again\n");
             break;
         }
         printf("\n");
