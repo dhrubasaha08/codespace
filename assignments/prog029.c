@@ -2,7 +2,7 @@
 Roll No:        B.Sc(Sem-IV)-04
 Program No:     29
 Program Name:   Write a C program to implement Naive String Matching algorithm.
-Date:           2/7/2022
+Date:           3/7/2022
 ******************************************************************************/
 
 #include <stdio.h>

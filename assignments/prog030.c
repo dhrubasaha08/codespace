@@ -2,7 +2,7 @@
 Roll No:        B.Sc(Sem-IV)-04
 Program No:     30
 Program Name:   Write a C program to implement KMP String Matching algorithm.
-Date:           30/06/2022
+Date:           3/7/2022
 ****************************************************************************/
 
 #include <stdio.h>
