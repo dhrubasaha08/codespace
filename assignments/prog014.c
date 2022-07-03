@@ -1,10 +1,10 @@
-/***************************************************************************************************************
+/*****************************************************************************************************************
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
-Program No:     13
-Program Name:   Write a C/C++ program to find a spanning tree from a connected graph by using Depth First Search.
+Program No:     14
+Program Name:   Write a C/C++ program to find a spanning tree from a connected graph by using Breadth First Search.
 Date:           3/7/2022
-****************************************************************************************************************/
+******************************************************************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -135,17 +135,26 @@ void printGraph(struct Graph *graph)
     }
 }
 
-void dfs(struct Graph *graph, int startVertex)
+void bfs(struct Graph *graph, int startVertex)
 {
+    struct queue *q = createQueue();
+    enqueue(q, startVertex);
     graph->visited[startVertex] = 1;
-    printf("%d ", startVertex);
-    struct node *temp = graph->adjLists[startVertex];
-    while (temp)
+    while (!isEmpty(q))
     {
-        int adjVertex = temp->vertex;
-        if (graph->visited[adjVertex] == 0)
-            dfs(graph, adjVertex);
-        temp = temp->next;
+        int v = dequeue(q);
+        printf("%d ", v);
+        struct node *temp = graph->adjLists[v];
+        while (temp)
+        {
+            int adjVertex = temp->vertex;
+            if (graph->visited[adjVertex] == 0)
+            {
+                enqueue(q, adjVertex);
+                graph->visited[adjVertex] = 1;
+            }
+            temp = temp->next;
+        }
     }
 }
 
@@ -161,7 +170,7 @@ void main()
     addEdge(graph, 3, 4);
     printGraph(graph);
     printf("\n");
-    dfs(graph, 0);
+    bfs(graph, 0);
     printf("\n");
 }
 
@@ -183,6 +192,6 @@ Output:
  Adjacency list of vertex 4
  head 
 
-0 2 3 4 1 
+0 2 1 3 4 
 
 */
