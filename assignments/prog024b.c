@@ -2,7 +2,7 @@
 Name:           Dhruba Saha
 Roll No:        B.Sc(Sem-IV)-04
 Program No:     24B
-Program Name:   Write a C program to sort (decending) a list of elements through a binary heap.
+Program Name:   Write a C program to sort (descending) a list of elements through a binary heap.
 Date:           14/06/2022
 **********************************************************************************************/
 
