@@ -1,20 +1,18 @@
 {
-    "configurations": [
-        {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c17",
-            "cppStandard": "c++23",
-            "intelliSenseMode": "linux-gcc-x64",
-            "mergeConfigurations": true,
-            "browse": {
-                "limitSymbolsToIncludedHeaders": true
-            }
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": ["${workspaceFolder}/**"],
+      "defines": [],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "c17",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "linux-gcc-x64",
+      "mergeConfigurations": true,
+      "browse": {
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ],
+  "version": 4
 }
