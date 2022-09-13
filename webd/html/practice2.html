@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    find n' th term of a series
+    Enter Range: <input type="text" id="range">
+    <input type="button" id="execute" value="Find">
+    <script type="text/javascript">
+        document.getElementById("execute").onclick = function () {
+            var a = 1, b = 3, c = 4, f;
+            var range = document.getElementById("range").value;
+            range = parseInt(range);
+
+            if (range == a)
+                alert(a);
+            else if (range == b)
+                alert(b);
+            else if (range == c)
+                alert(c);
+            else {
+                for (let index = 0; index < range - 3; index++) {
+                    f = a + b + c;
+                    a = b;
+                    b = c;
+                    c = f;
+                }
+            }
+            alert(f);
+        }
+    </script>
+</body>
+
+</html>
