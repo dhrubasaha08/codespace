@@ -17,85 +17,69 @@ def main():
 def encrypt():
     print("Encrypt")
     text = input("String: ")
-    row = int(input("Row: "))
-    cipher = 0
-    textLen = len(text)
-    temp = textLen%row
-    for i in range(temp):
-        text += "@"
-    
-    textChar = []
-    for i in range(textLen):
-        textChar.append(text[i])
-
-
-
-def decrypt
-
-
-
-"""
-def main():
-    str1 = input("String: ")
-    str1len = len(str1)
-    col = int(input("Column: "))
-    temp = str1len%col
-    temp = col-temp
-    for i in range(temp):
-        str1 = str1+"@"
-    
-    str1CharArr = []
-    for i in range(str1len):
-        str1CharArr.append(str1[i])
-
-    subArrLen = str1len/col
-    subArr = {}
-    for i in range(col):
-        subArrName = "subArr%d" % (i)
-        subArr[subArrName] = []
-
-    choice = int(input("Choice: "))
-    if choice == 1:
-        subArr = encrypt(str1CharArr,col)
-        for i in range(col):
-            subArrName = "subArr%d" % (i)
-            print(subArr[subArrName])
-    elif choice == 2:
-        subArr = decrypt(str1CharArr,col)
-        for i in range(col):
-            subArrName = "subArr%d" % (i)
-            print(subArr[subArrName])
-    elif choice == 3:
-        exit()
-    else:
-        print("Invalid Choice")
-
+    key = int(input("Key: "))
+    print("Encrypted String: ", end="")
+    rail = [['\n' for i in range(len(text))] for j in range(key)]
+    dir_down = False
+    row, col = 0, 0
+    for i in range(len(text)):
+        if (row == 0) or (row == key - 1):
+            dir_down = not dir_down
+        rail[row][col] = text[i]
+        col += 1
+        if dir_down:
+            row += 1
+        else:
+            row -= 1
+    result = []
+    for i in range(key):
+        for j in range(len(text)):
+            if rail[i][j] != '\n':
+                result.append(rail[i][j])
+    print("" . join(result))
     main()
-            
 
-def encrypt(str1CharArr,col):
-    subArrLen = len(str1CharArr)/col
-    subArr = {}
-    for i in range(col):
-        subArrName = "subArr%d" % (i)
-        subArr[subArrName] = []
-        
-    for i in range(col):
-        for j in range(int(subArrLen)):
-            subArr[subArrName].append(str1CharArr[i+j*col])
-    return subArr
+def decrypt():
+    print("Decrypt")
+    text = input("String: ")
+    key = int(input("Key: "))
+    print("Decrypted String: ", end="")
+    rail = [['\n' for i in range(len(text))] for j in range(key)]
+    dir_down = None
+    row, col = 0, 0
+    for i in range(len(text)):
+        if row == 0:
+            dir_down = True
+        if row == key - 1:
+            dir_down = False
+        rail[row][col] = '*'
+        col += 1
+        if dir_down:
+            row += 1
+        else:
+            row -= 1
+    index = 0
+    for i in range(key):
+        for j in range(len(text)):
+            if ((rail[i][j] == '*') and
+                    (index < len(text))):
+                rail[i][j] = text[index]
+                index += 1
+    result = []
+    row, col = 0, 0
+    for i in range(len(text)):
+        if row == 0:
+            dir_down = True
+        if row == key-1:
+            dir_down = False
+        if (rail[row][col] != '*'):
+            result.append(rail[row][col])
+            col += 1
+        if dir_down:
+            row += 1
+        else:
+            row -= 1
+    print("" . join(result))
+    main()
 
-
-def decrypt(str1CharArr,col):
-    subArrLen = len(str1CharArr)/col
-    subArr = {}
-    for i in range(col):
-        subArrName = "subArr%d" % (i)
-        subArr[subArrName] = []
-        
-    for i in range(col):
-        for j in range(int(subArrLen)):
-            subArr[subArrName].append(str1CharArr[i+j*col])
-    return subArr
-
-main()"""
+main()

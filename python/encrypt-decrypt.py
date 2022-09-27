@@ -18,7 +18,7 @@ def main():
 def encrypt():
     print("Encrypt")
     text = input("String: ")
-    key = input("Key: ")
+    key = int(input("Key: "))
     cipher = 0
     print("Encrypted String: ", end="")
     for i in range(len(text)):
@@ -43,7 +43,7 @@ def encrypt():
 def decrypt():
     print("Decrypt")
     text = input("String: ")
-    key = input("Key: ")
+    key = int(input("Key: "))
     cipher = 0
     print("Decrypted String: ", end="")
     for i in range(len(text)):
