@@ -14,6 +14,7 @@ def main():
         print("Invalid option")
         main()
 
+
 def encrypt():
     print("Encrypt")
     text = input("String: ")
@@ -38,6 +39,7 @@ def encrypt():
                 result.append(rail[i][j])
     print("" . join(result))
     main()
+
 
 def decrypt():
     print("Decrypt")
@@ -81,5 +83,6 @@ def decrypt():
             row -= 1
     print("" . join(result))
     main()
+
 
 main()
