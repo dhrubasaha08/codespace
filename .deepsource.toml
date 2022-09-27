@@ -53,3 +53,7 @@ enabled = true
 [[transformers]]
 name = "php-cs-fixer"
 enabled = true
+
+[[transformers]]
+name = "autopep8"
+enabled = true
