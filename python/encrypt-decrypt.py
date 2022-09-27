@@ -25,17 +25,17 @@ def encrypt():
         if text[i].isalpha() and text[i].isupper():
             cipher = int(ord(text[i]))+int(key)
             if cipher <= 90:
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
             elif cipher > 90:
                 cipher = (cipher+65)-91
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
         if text[i].isalpha() and text[i].islower():
             cipher = int(ord(text[i]))+int(key)
             if cipher <= 122:
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
             elif cipher > 122:
                 cipher = (cipher+97)-123
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
     print("")
     main()
 
@@ -50,17 +50,17 @@ def decrypt():
         if text[i].isalpha() and text[i].isupper():
             cipher = int(ord(text[i]))-int(key)
             if cipher >= 65:
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
             elif cipher < 65:
                 cipher = 91-(65-cipher)
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
         if text[i].isalpha() and text[i].islower():
             cipher = int(ord(text[i]))-int(key)
             if cipher >= 97:
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
             elif cipher < 97:
                 cipher = 123-(97-cipher)
-                print(chr(cipher), end = "")
+                print(chr(cipher), end="")
     print("")
     main()
 
