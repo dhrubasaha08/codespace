@@ -1,3 +1,6 @@
+import sys
+
+
 def main():
     print("Encryption/Decryption")
     print("""1. Encrypt
@@ -9,7 +12,7 @@ def main():
     elif choice == str(2):
         decrypt()
     elif choice == str(3):
-        exit()
+        sys.exit()
     else:
         print("Invalid option")
         main()
