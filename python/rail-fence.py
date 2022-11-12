@@ -23,7 +23,7 @@ def encrypt():
     text = input("String: ")
     key = int(input("Key: "))
     print("Encrypted String: ", end="")
-    rail = [['\n' for i in range(len(text))] for j in range(key)]
+    rail = [["\n" for i in range(len(text))] for j in range(key)]
     dir_down = False
     row, col = 0, 0
     for i in range(len(text)):
@@ -38,9 +38,9 @@ def encrypt():
     result = []
     for i in range(key):
         for j in range(len(text)):
-            if rail[i][j] != '\n':
+            if rail[i][j] != "\n":
                 result.append(rail[i][j])
-    print("" . join(result))
+    print("".join(result))
     main()
 
 
@@ -49,7 +49,7 @@ def decrypt():
     text = input("String: ")
     key = int(input("Key: "))
     print("Decrypted String: ", end="")
-    rail = [['\n' for i in range(len(text))] for j in range(key)]
+    rail = [["\n" for i in range(len(text))] for j in range(key)]
     dir_down = None
     row, col = 0, 0
     for i in range(len(text)):
@@ -57,7 +57,7 @@ def decrypt():
             dir_down = True
         if row == key - 1:
             dir_down = False
-        rail[row][col] = '*'
+        rail[row][col] = "*"
         col += 1
         if dir_down:
             row += 1
@@ -66,8 +66,7 @@ def decrypt():
     index = 0
     for i in range(key):
         for j in range(len(text)):
-            if ((rail[i][j] == '*') and
-                    (index < len(text))):
+            if (rail[i][j] == "*") and (index < len(text)):
                 rail[i][j] = text[index]
                 index += 1
     result = []
@@ -75,16 +74,16 @@ def decrypt():
     for i in range(len(text)):
         if row == 0:
             dir_down = True
-        if row == key-1:
+        if row == key - 1:
             dir_down = False
-        if (rail[row][col] != '*'):
+        if rail[row][col] != "*":
             result.append(rail[row][col])
             col += 1
         if dir_down:
             row += 1
         else:
             row -= 1
-    print("" . join(result))
+    print("".join(result))
     main()
 
 
