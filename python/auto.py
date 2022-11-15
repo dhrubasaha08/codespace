@@ -1,5 +1,5 @@
-import webbrowser
 import time
+import webbrowser
 
 url = "https://github.com/dhrubasaha08"
 while True:
