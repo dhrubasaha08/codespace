@@ -1,24 +1,24 @@
-// check wheather a string is palindrome or not
-
 #include <stdio.h>
 #include <string.h>
 
-int palindrome(char str[]);
+#define MAX 100
 
-void main()
+int palindrome(char str[]); // Function prototype
+
+void main() // Main Function
 {
-    char str[100];
-    int i, len, flag = 0;
+    char str[MAX];
+
     printf("Enter a string: ");
-    gets(str);
-    palindrome(str);
-    if (palindrome(str) == 1)
+    scanf("%s", str);
+
+    if (palindrome(str) == 0)
         printf("The string is palindrome.");
     else
         printf("The string is not palindrome.");
 }
 
-int palindrome(char str[])
+int palindrome(char str[]) // Function definition
 {
     int i, len, flag = 0;
     len = strlen(str);
