@@ -1,0 +1,10 @@
+create database jdbc;
+use jdbc;
+create table data1 (s_id int, s_name varchar(30));
+drop database  jdbc;
+show databases;
+use college;
+use college_date;
+show databases;
+show tables;
+drop database college_date;

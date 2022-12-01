@@ -56,6 +56,20 @@ public class App {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
+            String ar1[] = new String
+
+            try {
+                String qur = "select s_name from string1;";
+                ResultSet rs = stmt.executeQuery(qur);
+                while (rs.next()) {
+                    String s = rs.getString("s_name");
+                    
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
