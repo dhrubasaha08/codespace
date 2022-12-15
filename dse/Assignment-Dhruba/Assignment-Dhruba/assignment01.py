@@ -1,10 +1,9 @@
-'''
+"""
 this is an encryption algorithm; please try to understand how it works and
 modify it thus it works for integers as well.
-'''
+"""
 # Assignment 01
 # Dhruba Saha
-
 
 import sys
 
@@ -15,7 +14,7 @@ def encrypt(text, shift):
     for i in range(len(text)):
         char = text[i]
 
-        if (char.isupper()):
+        if char.isupper():
             result += chr(((ord(char)) + shift - 65) % 26 + 65)
 
         else:
@@ -29,7 +28,7 @@ def decrypt(text, shift):
     for i in range(len(text)):
         char = text[i]
 
-        if (char.isupper()):
+        if char.isupper():
             result += chr(((ord(char)) - shift - 65) % 26 + 65)
 
         else:

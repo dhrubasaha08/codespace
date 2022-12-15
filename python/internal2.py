@@ -1,11 +1,11 @@
-'''
+"""
 Internal 2
 
 Created by
 Dhruba Saha
 Ritidip Sarkar
 Surajit Das
-'''
+"""
 
 import random
 import sys
@@ -16,14 +16,14 @@ def encrypt(text, shift):
 
     shift += salt
 
-    salt_add = chr(salt+65)
+    salt_add = chr(salt + 65)
     result = ""
 
     for i in range(len(text)):
         char = text[i]
         shift += salt
 
-        if (char.isupper()):
+        if char.isupper():
             result += chr(((ord(char)) + shift - 65) % 26 + 65)
 
         else:
@@ -42,7 +42,7 @@ def decrypt(text, shift):
         char = text[i]
         shift += salt
 
-        if (char.isupper()):
+        if char.isupper():
             result += chr(((ord(char)) - shift - 65) % 26 + 65)
 
         else:
