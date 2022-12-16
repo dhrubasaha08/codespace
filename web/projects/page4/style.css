@@ -1,0 +1,9 @@
+h1{
+text-align:  center;
+color: var(--bs-secondary);
+}
+
+nav{
+color: var(--bs-secondary);
+background-color: var(--bs-dark);
+}

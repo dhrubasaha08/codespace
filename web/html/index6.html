@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCQ</title>
+  </head>
+
+  <body>
+    <h1>MCQ</h1>
+    <h2 id="question"></h2>
+    <input type="radio" name="option" id="option1" />
+    <label for="option1" id="label1"></label><br />
+    <input type="radio" name="option" id="option2" />
+    <label for="option2" id="label2"></label><br />
+    <input type="radio" name="option" id="option3" />
+    <label for="option3" id="label3"></label><br />
+    <input type="radio" name="option" id="option4" />
+    <label for="option4" id="label4"></label><br />
+
+    <button onclick="next()">Next</button>
+    <script>
+      let questions = [
+        {
+          question: "What is the full form of HTML?",
+          options: [
+            "Hyper Text Markup Language",
+            "Hyper Text Mode Language",
+            "Hyper Text Markup Language",
+            "Hyper Text Mode Language",
+          ],
+          answer: 0,
+        },
+        {
+          question: "What is the full form of CSS?",
+          options: [
+            "Cascading Style Sheet",
+            "Cascading Style Sheet",
+            "Cascading Style Sheet",
+            "Cascading Style Sheet",
+          ],
+          answer: 0,
+        },
+        {
+          question: "What is the full form of JS?",
+          options: ["JavaScript", "JavaScript", "JavaScript", "JavaScript"],
+          answer: 0,
+        },
+      ];
+      let question = document.getElementById("question");
+      let label1 = document.getElementById("label1");
+      let label2 = document.getElementById("label2");
+      let label3 = document.getElementById("label3");
+      let label4 = document.getElementById("label4");
+      let qCount = 0;
+      let score = 0;
+
+      function loadQuestion() {
+        let q = questions[qCount];
+        question.innerText = q.question;
+        label1.innerText = q.options[0];
+        label2.innerText = q.options[1];
+        label3.innerText = q.options[2];
+        label4.innerText = q.options[3];
+      }
+
+      function check() {
+        let ans = document.querySelector("input[type=radio]:checked");
+        if (ans == null) {
+          alert("please select an option");
+          return;
+        }
+        let ansIndex = parseInt(ans.id.charAt(ans.id.length - 1));
+        if (questions[qCount].answer == ansIndex - 1) {
+          score++;
+        }
+        ans.checked = false;
+      }
+
+      function next() {
+        check();
+        qCount++;
+        if (qCount == questions.length) {
+          document.write(
+            "<h1>Score: " + score + "/" + questions.length + "</h1>"
+          );
+        }
+        loadQuestion();
+      }
+      loadQuestion();
+    </script>
+  </body>
+</html>
