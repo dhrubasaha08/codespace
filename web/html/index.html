@@ -1,38 +1,36 @@
-<!DOCTYPE HTML>
-<HTML>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST 1</title>
+  </head>
 
-<HEAD>
-  <TITLE>TEST 1</TITLE>
-</HEAD>
-
-<BODY>
-  <style>
-    table,
-    tr,
-    td {
-      border: 1px solid black;
-    }
-  </style>
-  <table>
-    <tr>
-      <td>No</td>
-      <td>Name</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Dhruba</td>
-    </tr>
-  </table>
-  <br>
-  <form onsubmit="apx()">
-    <input class="text" type="text">
-  </form>
-  <script>
-    function apx() {
-      let n = document.getElementById("text");
-      alert("The number you entered is " + n);
-    }
-  </script>
-</BODY>
-
-</HTML>
+  <body>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+    <table>
+      <tr>
+        <td>No</td>
+        <td>Name</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Dhruba</td>
+      </tr>
+    </table>
+    <br />
+    <form onsubmit="apx()">
+      <input class="text" type="text" />
+    </form>
+    <script>
+      function apx() {
+        let n = document.getElementById("text");
+        alert("The number you entered is " + n);
+      }
+    </script>
+  </body>
+</html>
