@@ -2,30 +2,30 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ASCII to Hexadecimal and viceversa</title>
-    </head>
-    
-    <body>
-        <h1>ASCII to Hexadecimal and viceversa</h1>
-        <form>
-            <label for="input">Enter ASCII or Hexadecimal:</label>
-            <input type="text" id="input">
-            <input type="button" value="Convert" onclick="convert()">
-        </form>
-        <p id="output"></p>
-    </body>
+  <head>
+    <title>ASCII to Hexadecimal and viceversa</title>
+  </head>
 
-    <script>
-        function convert() {
-            var input = document.getElementById("input").value;
-            var output = "";
-            if (input.length == 1) {
-                output = input.charCodeAt(0).toString(16);
-            } else {
-                output = String.fromCharCode(parseInt(input, 16));
-            }
-            document.getElementById("output").innerHTML = output;
-        }
-    </script>
+  <body>
+    <h1>ASCII to Hexadecimal and viceversa</h1>
+    <form>
+      <label for="input">Enter ASCII or Hexadecimal:</label>
+      <input type="text" id="input" />
+      <input type="button" value="Convert" onclick="convert()" />
+    </form>
+    <p id="output"></p>
+  </body>
+
+  <script>
+    function convert() {
+      var input = document.getElementById("input").value;
+      var output = "";
+      if (input.length == 1) {
+        output = input.charCodeAt(0).toString(16);
+      } else {
+        output = String.fromCharCode(parseInt(input, 16));
+      }
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
 </html>
