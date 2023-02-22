@@ -9,28 +9,32 @@ y2 = x0 + x1+ x2
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JavaScript program to create an array of prefix sums of the given array.</title>
-    </head>
+  <head>
+    <title>
+      JavaScript program to create an array of prefix sums of the given array.
+    </title>
+  </head>
 
-    <body>
-        <h3>JavaScript program to create an array of prefix sums of the given array.</h3>
-        <input type="text" id="arr" placeholder="Enter an array">
-        <input type="button" value="Create" onclick="createArray()">
-        <p id="output"></p>
-    </body>
+  <body>
+    <h3>
+      JavaScript program to create an array of prefix sums of the given array.
+    </h3>
+    <input type="text" id="arr" placeholder="Enter an array" />
+    <input type="button" value="Create" onclick="createArray()" />
+    <p id="output"></p>
+  </body>
 
-    <script>
-        function createArray() {
-            var arr = document.getElementById("arr").value;
-            var arr = arr.split(",");
-            var newArr = [];
-            var sum = 0;
-            for (var i = 0; i < arr.length; i++) {
-                sum += parseInt(arr[i]);
-                newArr.push(sum);
-            }
-            document.getElementById("output").innerHTML = "New array: " + newArr;
-        }
-    </script>
+  <script>
+    function createArray() {
+      var arr = document.getElementById("arr").value;
+      var arr = arr.split(",");
+      var newArr = [];
+      var sum = 0;
+      for (var i = 0; i < arr.length; i++) {
+        sum += parseInt(arr[i]);
+        newArr.push(sum);
+      }
+      document.getElementById("output").innerHTML = "New array: " + newArr;
+    }
+  </script>
 </html>
