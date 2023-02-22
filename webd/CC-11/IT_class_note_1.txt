@@ -1,0 +1,40 @@
+1.	IP address
+2.	static/dynamic differences 
+3.	ip v4 vs v6
+4.	subnet musk
+5.	dns
+
+
+
+
+1.IP Address:	An IP address is a unique address that identifies a device on the internet or a local network. 
+IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network.
+An IP address is a string of numbers separated by periods. IP addresses are expressed as a set of 
+four numbers — an example address might be 192.158.1.38. Each number in the set can range from 0 to 255.
+So, the full IP addressing range goes from 0.0.0.0 to 255.255.255.255.
+IP addresses are not random. They are mathematically produced and allocated by the Internet Assigned Numbers Authority (IANA),
+ a division of the Internet Corporation for Assigned Names and Numbers (ICANN). ICANN is a non-profit organization that was 
+established in the United States in 1998 to help maintain the security of the internet and allow it to be usable by all. 
+Each time anyone registers a domain on the internet, they go through a domain name registrar, who pays a small fee to ICANN 
+to register the domain.
+
+Types of ip
+1. consumer
+2. private
+3. public-> a.dynamic	b.static
+
+
+
+
+2. static vs dynamic
+Dynamic IP addresses:	Dynamic IP addresses change automatically and regularly. ISPs buy a large pool of IP addresses and 
+assign them automatically to their customers. Periodically, they re-assign them and put the older IP addresses back into the 
+pool to be used for other customers. The rationale for this approach is to generate cost savings for the ISP. Automating the 
+regular movement of IP addresses means they don’t have to carry out specific actions to re-establish a customer's IP address 
+if they move home, for example. There are security benefits, too, because a changing IP address makes it harder for criminals 
+to hack into your network interface.
+
+Static IP addresses:	In contrast to dynamic IP addresses, static addresses remain consistent. Once the network assigns an 
+IP address, it remains the same. Most individuals and businesses do not need a static IP address, but for businesses that plan 
+to host their own server, it is crucial to have one. This is because a static IP address ensures that websites and email addresses 
+tied to it will have a consistent IP address — vital if you want other devices to be able to find them consistently on the web.

@@ -1,0 +1,17 @@
+1.Data is two type
+	Moving data(ssl,tsl)
+	Static Data
+2. Integrity, Authentication, confidentiality, non-reputation
+3. Access control
+
+
+1. security Services
+	i.confidentiality: Confidentiality is the protection of trasnsmitted data from passive attacks.
+With respect to release of messge contains several lavels of protection can be identified
+2. Authentication : the authentication service is concerned with assuring that a communication  is authentic
+
+
+
+apaine
+caseer 
+hill cipher

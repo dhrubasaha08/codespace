@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Date Checker</title>
+</head>
+<body>
+    <h1>Date Checker</h1>
+    <form>
+        <label for="string">Enter a string:</label>
+        <input type="text" id="string" name="string">
+        <button type="button" onclick="checkForDate()">Check for Date</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function checkForDate() {
+            var string = document.getElementById("string").value;
+            var dateRegex = /\b(0?[1-9]|1[0-2])[\/-](0?[1-9]|[12]\d|3[01])[\/-](19|20)\d{2}\b/; // regular expression for date format MM/DD/YYYY or MM-DD-YYYY
+            var result = dateRegex.test(string);
+            if (result) {
+                document.getElementById("result").innerHTML = "The string contains a date.";
+            } else {
+                document.getElementById("result").innerHTML = "The string does not contain a date.";
+            }
+        }
+    </script>
+</body>
+</html>
