@@ -1,0 +1,5 @@
+%find the maximum of a list
+
+max([X], X).
+max([H|T], Max) :- max(T, MaxTail),
+Max is max(H, MaxTail).
