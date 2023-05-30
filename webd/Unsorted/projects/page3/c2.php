@@ -1,1 +1,0 @@
-#write a php program to find the intrigation of a given fuction in a given range using simson 1/3 rule
